@@ -1,5 +1,6 @@
 package com.springbatch.demo.Jobs;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.StepContribution;
@@ -23,16 +24,13 @@ import java.util.List;
 import java.util.function.Function;
 
 @Configuration
+@RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class Job3 {
 
     String jobName = this.getClass().getName().concat("job");
 
-    @Autowired
-    private JobBuilderFactory jobBuilderFactory;
-
-    @Autowired
-    private StepBuilderFactory stepBuilderFactory;
-
+    private final JobBuilderFactory jobBuilderFactory;
+    private final StepBuilderFactory stepBuilderFactory;
 
     @Bean
     public Job mJob3(){

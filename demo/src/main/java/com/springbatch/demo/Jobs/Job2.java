@@ -1,4 +1,4 @@
-package com.springbatch.demo.Job1;
+package com.springbatch.demo.Jobs;
 
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
@@ -15,9 +15,10 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+//@Configuration
 public class Job2 {
 
+    String jobName = this.getClass().getName().concat("job");
     public static final String JOB_PARAMETERS_NAME = "#{jobParameters['name']}";
 
     @Autowired
@@ -28,9 +29,10 @@ public class Job2 {
 
 
     @Bean
-    public Job mJob(){
+    public Job mJob2(){
+
         return jobBuilderFactory
-                .get("mJob")
+                .get(jobName)
                 .start(imprimeOlaStep())
                 .incrementer(new RunIdIncrementer()) //incrementador automatico do id job
                 .build();

@@ -18,32 +18,11 @@ public class Job1 {
     @Autowired
     private JobBuilderFactory jobBuilderFactory;
 
-    @Autowired
-    private StepBuilderFactory stepBuilderFactory;
-
-
     @Bean
-    public Job mJob(){
+    public Job mJob(Step imprimeOlaStep){
         return jobBuilderFactory
                 .get("mJob")
-                .start(imprimeOlaStep())
+                .start(imprimeOlaStep)
                 .build();
-    }
-
-    private Step imprimeOlaStep() {
-        return stepBuilderFactory
-                .get("imprimeOlaStep")
-                .tasklet(myTasklet())
-                .build();
-    }
-
-    private Tasklet myTasklet() {
-        return new Tasklet() {
-            @Override
-            public RepeatStatus execute(StepContribution stepContribution, ChunkContext chunkContext) throws Exception {
-                System.out.println("imprimindo ola mundo step");
-                return RepeatStatus.FINISHED;
-            }
-        };
     }
 }

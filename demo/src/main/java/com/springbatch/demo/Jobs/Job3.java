@@ -46,7 +46,7 @@ public class Job3 {
     private Step imprimeOlaStep() {
         return stepBuilderFactory
                 .get("imprimeNumerosParImparStep")
-                .<Integer, String> chunk(1) //2 //3
+                .<Integer, String> chunk(1) //2 //3 //afata diretamente a memoria
                 .reader(reader())
                 .processor(processor())
                 .writer(writer())

@@ -1,4 +1,4 @@
-package com.springbatch.demo.Job1;
+package com.springbatch.demo.Jobs.Job1;
 
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;

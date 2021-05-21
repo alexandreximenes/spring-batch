@@ -27,7 +27,6 @@ public class Job2 {
     @Autowired
     private StepBuilderFactory stepBuilderFactory;
 
-
     @Bean
     public Job mJob2(){
 

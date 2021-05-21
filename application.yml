@@ -7,5 +7,14 @@ spring:
     initialize-schema: always
     job:
       enabled: true
-
+app:
+  datasource:
+    url: jdbc:mysql://localhost:3306/app
+    username: root
+    password: root
+  batch:
+    initialize-schema: always
+    job:
+      enabled: true	
+  
 

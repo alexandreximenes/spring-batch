@@ -10,6 +10,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MyStep {
 
+    //https://docs.spring.io/spring-batch/docs/current/reference/html/domain.html#domainLanguageOfBatch
+
     @Autowired
     private StepBuilderFactory stepBuilderFactory;
 

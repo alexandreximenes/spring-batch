@@ -8,10 +8,10 @@ import org.springframework.core.io.FileSystemResource;
 @Configuration
 public class ApplicationPropsConfig {
 
-    public static final String PATH_APPLICATION_YML = "/home/alexandre/Documentos/cursos/application.yml";
+    public static final String PATH_APPLICATION_YML = "/home/alexandre/Documentos/cursos/application.properties";
 
     @Bean
-    public PropertySourcesPlaceholderConfigurer placeholderConfigurer(){
+    public static PropertySourcesPlaceholderConfigurer placeholderConfigurer(){
         System.out.println("Buscando Application.yml em "+ PATH_APPLICATION_YML);
         PropertySourcesPlaceholderConfigurer configurer = new PropertySourcesPlaceholderConfigurer();
         configurer.setLocation(new FileSystemResource(PATH_APPLICATION_YML));

@@ -1,1 +1,15 @@
 #externalizei esse arquivo e vou chamar via codigo.
+logging:
+  pattern:
+    dateformat: dd-MM-yyyy HH:mm:ss
+  level:
+    web: INFO
+    sql: INFO
+    root: INFO
+    org:
+      hibernate: INFO
+      springframework:
+        web: INFO
+  file:
+    path: logs/
+    name: logs/batch.log

@@ -15,14 +15,13 @@ public class DatasourceConfig {
     @Primary
     @ConfigurationProperties(prefix = "spring.datasource")
     @Bean
-    public DataSource springDataSouce(){
+    public DataSource springDataSource(){
         return DataSourceBuilder.create().build();
     }
 
-    @Qualifier(value = "appDataSouce")
     @ConfigurationProperties(prefix = "app.datasource")
     @Bean
-    public DataSource appDataSouce(){
+    public DataSource appDataSource(){
         return DataSourceBuilder.create().build();
     }
 }

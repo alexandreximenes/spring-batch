@@ -1,6 +1,6 @@
-package com.springbatch.demo.arquivos.larguraFixa.reader;
+package com.springbatch.demo.arquivos.larguraDelimitada.reader;
 
-import com.springbatch.demo.arquivos.larguraFixa.dominio.Cliente;
+import com.springbatch.demo.arquivos.larguraDelimitada.dominio.Cliente;
 import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.batch.item.file.builder.FlatFileItemReaderBuilder;
@@ -10,28 +10,21 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.Resource;
 
-//@Configuration
-public class LeituraArquivoLarguraFixaReaderConfig {
+@Configuration
+public class LeituraArquivoLarguraDelimitadaReaderConfig {
 
 	//arquivoClientes=file:files/clientes.txt
 	@StepScope
 	@Bean
-	public FlatFileItemReader<Cliente> leituraArquivoLarguraFixaReader(@Value("#{jobParameters['arquivoClientes']}") Resource resource) {
+	public FlatFileItemReader<Cliente> leituraArquivoLarguraDelimitadaReader(@Value("#{jobParameters['arquivoClientes']}") Resource resource) {
 
 		return new FlatFileItemReaderBuilder<Cliente>()
-				.name("leituraArquivoLarguraFixaReader")
+				.name("leituraArquivoLarguraDelimitadaReader")
 				.resource(resource)
-				.fixedLength()
-				.columns(getColunas())
+				.delimited()
+				.delimiter(",")
 				.names(new String[]{"nome", "sobrenome", "idade", "email"})
 				.targetType(Cliente.class)
 				.build();
 	}
-
-	//Especificação do arquivo.
-	public Range[] getColunas(){
-		Range[] ranges = new Range[]{new Range(1,10), new Range(11,20), new Range(21,23), new Range(24,43)};
-		return ranges;
-	}
-
 }

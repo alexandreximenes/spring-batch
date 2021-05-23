@@ -1,11 +1,12 @@
-package com.springbatch.demo.arquivos.larguraFixa.writer;
+package com.springbatch.arquivolargurafixa.writer;
 
-import com.springbatch.demo.arquivos.larguraFixa.dominio.Cliente;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-//@Configuration
+import com.springbatch.arquivolargurafixa.dominio.Cliente;
+
+@Configuration
 public class LeituraArquivoLarguraFixaWriterConfig {
 	@Bean
 	public ItemWriter<Cliente> leituraArquivoLarguraFixaWriter() {

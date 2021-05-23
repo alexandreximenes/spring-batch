@@ -23,7 +23,7 @@ import org.springframework.context.annotation.Configuration;
 import java.util.List;
 import java.util.function.Function;
 
-@Configuration
+//@Configuration
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class Job3 {
 

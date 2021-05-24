@@ -285,3 +285,17 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 23-05-2021 21:56:10  INFO 28763 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=arquivoMultiplosFormatosJob]] completed with the following parameters: [{run.id=5, arquivoClientes=file:files/clientesTransacoes.txt}] and the following status: [COMPLETED] in 1s310ms
 23-05-2021 21:56:10  INFO 28763 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 23-05-2021 21:56:10  INFO 28763 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+23-05-2021 21:59:11  INFO 29031 --- [main] com.springbatch.demo.DemoApplication     : Starting DemoApplication using Java 11.0.11 on alexandre with PID 29031 (/home/alexandre/Documentos/cursos/spring batch/demo/target/classes started by alexandre in /home/alexandre/Documentos/cursos/spring batch/demo)
+23-05-2021 21:59:11  INFO 29031 --- [main] com.springbatch.demo.DemoApplication     : No active profile set, falling back to default profiles: default
+23-05-2021 21:59:12  INFO 29031 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+23-05-2021 21:59:13  INFO 29031 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+23-05-2021 21:59:13  INFO 29031 --- [main] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
+23-05-2021 21:59:13  INFO 29031 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
+23-05-2021 21:59:13  INFO 29031 --- [main] com.springbatch.demo.DemoApplication     : Started DemoApplication in 2.613 seconds (JVM running for 3.648)
+23-05-2021 21:59:13  INFO 29031 --- [main] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: [arquivoClientes=file:files/clientesTransacoes.txt]
+23-05-2021 21:59:13  INFO 29031 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=arquivoMultiplosFormatosJob]] launched with the following parameters: [{run.id=6, arquivoClientes=file:files/clientesTransacoes.txt}]
+23-05-2021 21:59:14  INFO 29031 --- [main] o.s.batch.core.job.SimpleStepHandler     : Executing step: [leituraArquivoMultiplosFormatosStep]
+23-05-2021 21:59:15  INFO 29031 --- [main] o.s.batch.core.step.AbstractStep         : Step: [leituraArquivoMultiplosFormatosStep] executed in 970ms
+23-05-2021 21:59:15  INFO 29031 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=arquivoMultiplosFormatosJob]] completed with the following parameters: [{run.id=6, arquivoClientes=file:files/clientesTransacoes.txt}] and the following status: [COMPLETED] in 1s358ms
+23-05-2021 21:59:15  INFO 29031 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+23-05-2021 21:59:15  INFO 29031 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

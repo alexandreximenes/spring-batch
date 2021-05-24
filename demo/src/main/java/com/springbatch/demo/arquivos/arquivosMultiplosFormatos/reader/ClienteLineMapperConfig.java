@@ -16,7 +16,7 @@ import java.util.Map;
 @Configuration
 public class ClienteLineMapperConfig {
 
-    @Bean
+    @Bean("mLineMapper")
     public PatternMatchingCompositeLineMapper lineMapper(){
         PatternMatchingCompositeLineMapper lineMapper = new PatternMatchingCompositeLineMapper();
         lineMapper.setFieldSetMappers(fieldMappers());

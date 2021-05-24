@@ -313,3 +313,17 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 24-05-2021 03:49:16  INFO 13066 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=jdbcCursorReaderJob]] completed with the following parameters: [{name=Amanda, run.id=2}] and the following status: [COMPLETED] in 818ms
 24-05-2021 03:49:17  INFO 13066 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 24-05-2021 03:49:17  INFO 13066 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+24-05-2021 03:59:13  INFO 13738 --- [main] com.springbatch.demo.DemoApplication     : Starting DemoApplication using Java 11.0.11 on alexandre with PID 13738 (/home/alexandre/Documentos/cursos/spring batch/demo/target/classes started by alexandre in /home/alexandre/Documentos/cursos/spring batch/demo)
+24-05-2021 03:59:13  INFO 13738 --- [main] com.springbatch.demo.DemoApplication     : No active profile set, falling back to default profiles: default
+24-05-2021 03:59:14  INFO 13738 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+24-05-2021 03:59:14  INFO 13738 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+24-05-2021 03:59:14  INFO 13738 --- [main] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
+24-05-2021 03:59:15  INFO 13738 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
+24-05-2021 03:59:15  INFO 13738 --- [main] com.springbatch.demo.DemoApplication     : Started DemoApplication in 2.493 seconds (JVM running for 3.402)
+24-05-2021 03:59:15  INFO 13738 --- [main] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: [name=Amanda]
+24-05-2021 03:59:15  INFO 13738 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=jdbcCursorReaderJob]] launched with the following parameters: [{name=Amanda, run.id=3}]
+24-05-2021 03:59:15  INFO 13738 --- [main] o.s.batch.core.job.SimpleStepHandler     : Executing step: [jdbcCursorReaderStep]
+24-05-2021 03:59:16  INFO 13738 --- [main] o.s.batch.core.step.AbstractStep         : Step: [jdbcCursorReaderStep] executed in 468ms
+24-05-2021 03:59:16  INFO 13738 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=jdbcCursorReaderJob]] completed with the following parameters: [{name=Amanda, run.id=3}] and the following status: [COMPLETED] in 860ms
+24-05-2021 03:59:16  INFO 13738 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+24-05-2021 03:59:16  INFO 13738 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
